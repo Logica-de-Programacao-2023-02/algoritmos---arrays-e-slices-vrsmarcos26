@@ -1,3 +1,5 @@
+// Crie um Array de floats com 4 elementos e calcule o produto dos valores armazenados no Array.
+
 package main
 
 import "fmt"
