@@ -7,26 +7,22 @@ package main
 import "fmt"
 
 func main() {
-
 	slice := []int{1, 2, 3, 4, 5}
 
-	var n1 int
-	fmt.Print("Informe um número: ")
-	fmt.Scan(&n1)
+	var x int
 
-	for _, elementoarray := range slice {
-		if elementoarray == n1 {
-			fmt.Println(slice)
-			return
+	fmt.Print("Digite um valor: ")
+	fmt.Scan(&x)
+
+	var achou bool
+
+	for _, valor := range slice {
+		if x == valor {
+			achou = true
+			break
 		}
-
 	}
-	for _, elementoarray := range slice {
-		if elementoarray != n1 {
-			slice = append(slice, n1)
-			fmt.Println(slice)
-			return
-		}
-
+	if !achou {
+		slice = append(slice, x)
 	}
 }
